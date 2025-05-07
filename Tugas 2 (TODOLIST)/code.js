@@ -1,10 +1,16 @@
+document.getElementById("info").addEventListener('click', function() {
+    alert("Versi 1: Sesuai dengan PPT\n" + "Versi 2: Penyesuaian dengan input\n" + "Versi 3: Penyesuaian dengan input, hapus button di list, dan reset value"
+    );
+});
+
 // versi 1 (sesuai dengan PPT)
-{ function tambahver1() {
+function tambahver1() {
     let teks = "paragraf ini akan dihapus"
     let p = document.createElement("p");
+    // p.style.margin = "0 20px"
     p.innerText = teks
     p.id = "penghapusan1";
-    document.getElementById("container_output1").appendChild(p);
+    document.getElementById("container_output1").appendChild(p)
 }
 
 function hapusver1() {
@@ -16,7 +22,6 @@ function hapusver1() {
     else{
         alert("Paragraf tidak ditemukan di versi ke-1!")
     }
-}
 }
 
 // Versi 2 (penyesuaian dengan input)
@@ -54,24 +59,28 @@ function tambahver3() {
         return;
     }
 
-    let oli = document.createElement("li");
+    let oli = document.createElement("oli");
     oli.className = "todo-item";
 
-    let ospan = document.createElement("span");
+    let ospan = document.createElement("ospan");
     ospan.textContent = teks;
     oli.appendChild(ospan);
 
-    // tombol hapus di samping li
-    let hapusButon = document.createElement("button");
-    hapusButon.textContent= "Hapus";
-    hapusButon.className = "hapus-item";
-    hapusButon.onclick = function (){
+    let hapusButton = document.createElement("button");
+    hapusButton.textContent = "Hapus";
+    hapusButton.className = "hapus-item";
+    hapusButton.onclick = function() {
         oli.remove();
+        // fix bug bruh
+        adjustScroll();
     };
-    oli.appendChild(hapusButon);
+    oli.appendChild(hapusButton);
 
     document.getElementById("container_output3").appendChild(oli);
     document.getElementById("inputver3").value = "";
+
+    // scroll saat item melebihi kartu
+    scrollToBottom();
 }
 
 function resetver3(){

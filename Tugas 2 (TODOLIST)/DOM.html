@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- versi 1 (sesuai dengan PPT) -->
-    <div class="container">
-       <h1>Tugas to do List</h1>
-       <button onclick="tambahver1()">Tambah Paragraf</button>
-       <button onclick="hapusver1()">Hapus Paragraf</button>
-       <div id="container_output1"></div>
-    </div>
+    <h1>Tugas to do List</h1>
+    <button class="info" id="info">Info</button>
+    <section>
+        <!-- versi 1 (sesuai dengan PPT) -->
+        <div class="container first">
+            <h3>Versi 1</h3>
+            <div class="buttons">
+                <button onclick="tambahver1()">Tambah Paragraf</button>
+                <button onclick="hapusver1()">Hapus Paragraf</button>
+            </div>
+            <div class="hasil">
+                <div class="output" id="container_output1"></div>
+            </div>
+        </div>
+        
 
-    <!-- Versi 2 (penyesuaian dengan input) -->
-    <div class="container">
-       <h1>Tugas to do List</h1>
-       <button onclick="tambahver2()">Tambah Paragraf</button>
-       <button onclick="hapusver2()">Hapus Paragraf</button>
-       <input type="text" id="inputver2" placeholder="Masukkan teks...">
-       <div id="container_output2"></div>
-    </div>
-
-    <!-- Versi 3 (penyesuaian dengan input, hapus button di list, dan reset value) -->
-    <div class="container">
-        <h1>Tugas to do List</h1>
-        <button onclick="tambahver3()">Tambah Paragraf</button>
-        <button onclick="resetver3()">Hapus Paragraf</button>
-        <input type="text" id="inputver3" placeholder="Masukkan teks...">
-        <ul id="container_output3"></ul>
-     </div>
-
+        <!-- Versi 2 (penyesuaian dengan input) -->
+        <div class="container second">
+            <h3>Versi 2</h3>
+            <input type="text" id="inputver2" placeholder="Masukkan teks...">
+            <div class="buttons">
+                <button onclick="tambahver2()">Tambah Paragraf</button>
+                <button onclick="hapusver2()">Hapus Paragraf</button>
+            </div>
+            <div class="hasil">
+                <div class="output" id="container_output2"></div>
+            </div>
+        </div>
+        
+        <!-- Versi 3 (penyesuaian dengan input, hapus button di list, dan reset value) -->
+        <div class="container third">
+            <h3>Versi 3</h3>
+            <input type="text" id="inputver3" placeholder="Masukkan teks...">
+            <div class="buttons">
+                <button onclick="tambahver3()">Tambah Paragraf</button>
+                <button onclick="resetver3()" style="padding: 10px 15px; background-color: #FF0000; color: whitesmoke; font-weight: 600; border: rgba(245, 222, 179, 0.349) 1px solid;">Reset Paragraf</button>
+            </div>
+            <div class="hasil">
+                <ul class="output" id="container_output3"></ul>
+            </div>
+        </div>
+    </section>
     <script src="code.js"></script>
 </body>
+
 </html>

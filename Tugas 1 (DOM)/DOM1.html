@@ -83,5 +83,23 @@
             }
          </script>
      </div>
+
+     <!-- dom_5.js -->
+    <div class="dom5">
+        <p>6. dom_6.js</p>
+        <!-- CONTOH querySelectorAll() -->
+        <h1>CONTOH querySelectorAll()</h1>
+        <div class="kotak">Kotak 1</div>
+        <div class="kotak">Kotak 2</div>
+        <button onclick="ubahsemua()">Ubah Semua</button>
+        <script>
+            function ubahsemua() {
+                let semua = document.querySelectorAll(".kotak");
+                semua.forEach((elemen) => {
+                    elemen.style.backgroundColor = "lightblue";
+                });
+            }
+        </script>
+    </div>
 </body>
 </html>

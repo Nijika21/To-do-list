@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom.js</title>
+</head>
+<body>
+    <div class="dom 1">
+        <!-- dom_1.js -->
+        <p>1. dom_1.js</p>
+        <h1 id="judul">Halo dunia!</h1>
+        <script>
+            let elemen = document.getElementById("judul");
+            console.log(elemen.innerHTML)
+        </script>
+    </div>
+    <div class="dom 2">
+        <!-- dom_2.js -->
+        <p>2. dom_2.js</p>
+        <!-- CONTOH getElementById -->
+        <h1>CONTOH getElementById</h1>
+        <h1 id="judul-1">Selamat Datang</h1>
+        <button onclick="ubahjudul()">Ubah Judul</button>
+        <script>
+            function ubahjudul() {
+                let elemen = document.getElementById("judul-1");
+                elemen.innerText = "judul telah diubah";
+            }
+        </script>
+    </div>
+    <div class="dom 3">
+        <!-- dom_3.js -->
+        <p>3. dom_3.js</p>
+        <!-- CONTOH getElementByClassName() -->
+        <h1>CONTOH getElementByClassName()</h1>
+        <p class="teks">Teks 1</p>
+        <p class="teks">Teks 2</p>
+        <button onclick="ubahwarna()">ubah warna</button>
+        <script>
+            function ubahwarna() {
+                let elemen = document.getElementsByClassName("teks");
+                for (let i = 0; 1 < elemen.length; i++) {
+                    elemen[i].style.color = "red";
+                };
+            };
+        </script>
+    </div>
+</body>
+</html>

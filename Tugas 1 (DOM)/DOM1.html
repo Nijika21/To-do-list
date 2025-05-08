@@ -46,5 +46,23 @@
             };
         </script>
     </div>
+    <div class="dom 4">
+        <!-- dom_4.js -->
+        <p>4. dom_4.js</p>
+        <!-- CONTOH getElementByTagName() -->
+        <h1>CONTOH getElementByTagName()</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+        <button onclick="hitungitem()">Hitung Item</button>
+        <script>
+            function hitungitem() {
+                let semuaitem = document.getElementsByTagName("li");
+                alert("Jumlah item " + semuaitem.length);
+            };
+        </script>
+    </div>
+
 </body>
 </html>

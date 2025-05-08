@@ -6,8 +6,9 @@
     <title>dom.js</title>
 </head>
 <body>
-    <div class="dom 1">
-        <!-- dom_1.js -->
+
+    <!-- dom_1.js -->
+    <div class="dom 1">x
         <p>1. dom_1.js</p>
         <h1 id="judul">Halo dunia!</h1>
         <script>
@@ -15,8 +16,9 @@
             console.log(elemen.innerHTML)
         </script>
     </div>
+
+    <!-- dom_2.js -->
     <div class="dom 2">
-        <!-- dom_2.js -->
         <p>2. dom_2.js</p>
         <!-- CONTOH getElementById -->
         <h1>CONTOH getElementById</h1>
@@ -29,8 +31,9 @@
             }
         </script>
     </div>
+
+    <!-- dom_3.js -->
     <div class="dom 3">
-        <!-- dom_3.js -->
         <p>3. dom_3.js</p>
         <!-- CONTOH getElementByClassName() -->
         <h1>CONTOH getElementByClassName()</h1>
@@ -46,8 +49,9 @@
             };
         </script>
     </div>
+
+    <!-- dom_4.js -->
     <div class="dom 4">
-        <!-- dom_4.js -->
         <p>4. dom_4.js</p>
         <!-- CONTOH getElementByTagName() -->
         <h1>CONTOH getElementByTagName()</h1>
@@ -64,5 +68,20 @@
         </script>
     </div>
 
+    <!-- dom_5.js -->
+     <div class="dom 5">
+        <p>5. dom_5.js</p>
+        <!-- CONTOH querySelector() -->
+         <h1>CONTOH querySelector()</h1>
+         <p class="highlight">Teks pertama</p>
+         <p class="highlight">Teks kedua</p>
+         <button onclick="ganti()">Ganti teks</button>
+         <script>
+            function ganti() {
+                let elemen = document.querySelector(".highlight");
+                elemen.textContent = "Ini Teks baru!";
+            }
+         </script>
+     </div>
 </body>
 </html>

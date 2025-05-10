@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dom.js</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- dom_1.js -->
-    <div class="dom 1">x
+    <div class="dom 1">
         <p>1. dom_1.js</p>
         <h1 id="judul">Halo dunia!</h1>
         <script>
@@ -16,6 +17,8 @@
             console.log(elemen.innerHTML)
         </script>
     </div>
+
+    <hr>
 
     <!-- dom_2.js -->
     <div class="dom 2">
@@ -31,6 +34,8 @@
             }
         </script>
     </div>
+
+    <hr>
 
     <!-- dom_3.js -->
     <div class="dom 3">
@@ -50,6 +55,8 @@
         </script>
     </div>
 
+    <hr>
+
     <!-- dom_4.js -->
     <div class="dom 4">
         <p>4. dom_4.js</p>
@@ -68,6 +75,8 @@
         </script>
     </div>
 
+    <hr>
+
     <!-- dom_5.js -->
      <div class="dom 5">
         <p>5. dom_5.js</p>
@@ -79,12 +88,14 @@
          <script>
             function ganti() {
                 let elemen = document.querySelector(".highlight");
-                elemen.textContent = "Ini Teks baru!";
+                elemen.innerText = "Ini Teks baru!";
             }
          </script>
      </div>
 
-     <!-- dom_5.js -->
+     <hr>
+
+     <!-- dom_6.js -->
     <div class="dom5">
         <p>6. dom_6.js</p>
         <!-- CONTOH querySelectorAll() -->
@@ -102,5 +113,8 @@
             }
         </script>
     </div>
+
+    <hr>
+    
 </body>
 </html>

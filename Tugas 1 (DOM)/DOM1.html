@@ -96,7 +96,7 @@
      <hr>
 
      <!-- dom_6.js -->
-    <div class="dom5">
+    <div class="dom 6">
         <p>6. dom_6.js</p>
         <!-- CONTOH querySelectorAll() -->
         <h1>CONTOH querySelectorAll()</h1>
@@ -115,6 +115,23 @@
     </div>
 
     <hr>
-    
+
+    <!-- dom_7.js -->
+     <div class="dom 7">
+        <p>7. dom_7.js</p>
+        <h1>CONTOH DOM .innerHTML</h1>
+        <div id="box">ini <strong>teks penting!</strong></div>
+        <button onclick="ubahisi()">ubah HTML</button>
+        <script>
+            function ubahisi() {
+                let elemen = document.getElementById("box")
+                elemen.innerHTML = ("<em>teks ini diganti menjadi tag miring</em>")
+            };
+        </script>
+     </div>
+     
+     <hr>
+
+     
 </body>
 </html>

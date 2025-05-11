@@ -124,14 +124,32 @@
         <button onclick="ubahisi()">ubah HTML</button>
         <script>
             function ubahisi() {
-                let elemen = document.getElementById("box")
-                elemen.innerHTML = ("<em>teks ini diganti menjadi tag miring</em>")
+                let elemen = document.getElementById("box");
+                elemen.innerHTML = ("<em>teks ini diganti menjadi tag miring</em>");
             };
         </script>
      </div>
-     
+    
      <hr>
+    
+    <!-- dom_8.js -->
+    <div class="dom 8">
+        <p>8. dom_8.js</p>
+        <h1>CONTOH DOM .style.property</h1>
+        <p id="pesan">Perhatikan gaya teks ini.</p>
+        <button onclick="ubahgaya()">Ubah gaya</button>
+        <script>
+            function ubahgaya() {
+                let p = document.getElementById("pesan");
+                p.style.color = "blue";
+                p.style.fontSize = "20px";
+                p.style.fontWeight = "800";
+            };
+        </script>
+    </div>
 
-     
+    <hr>
+
+
 </body>
 </html>

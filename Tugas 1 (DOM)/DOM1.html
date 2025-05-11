@@ -150,6 +150,36 @@
 
     <hr>
 
+    <!-- dom_9.js -->
+    <div class="dom 8">
+        <p>9. dom_9.js</p>
+        <h1>CONTOH DOM .createElement() .appenchild() .removeChild</h1>
+        <button onclick="tambah()">Tambah Paragraf</button>
+        <button onclick="hapus()">Hapus Paragraf</button>
+    <div style= "height: 200px; overflow-y: auto;">
+        <div id="container"></div>
+    </div>
+        <script>
+            function tambah() {
+                let p = document.createElement("p");
+                p.innerText = "ini paragraf yang akan dihapus";
+                p.id = "hapusSaya";
+                document.getElementById("container").appendChild(p);
+            }
 
+            function hapus() {
+                let container = document.getElementById("container");
+                let target = document.getElementById("hapusSaya");
+                if (target) {
+                    container.removeChild(target);
+                } else {
+                    alert("Paragraf belum ada atau sudah dihapus")
+                };
+            };
+        </script>
+
+        <hr>
+    </div>
+    <footer style=" display: flex; justify-content: center;"><h1 style="display: flex;">END</h1></footer>
 </body>
 </html>

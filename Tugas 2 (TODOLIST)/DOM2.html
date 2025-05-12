@@ -10,19 +10,20 @@
 </head>
 
 <body>
-        <!-- Tugas ke-2 -->
-        <div class="container third">
-            <h1>Tugas To Do List</h1>
-            <input type="text" id="inputver3" placeholder="Masukkan teks...">
-            <div class="buttons">
-                <button onclick="tambahver3()">Tambah Paragraf</button>
-                <button onclick="resetver3()" style="padding: 10px 15px; background-color: #FF0000; color: whitesmoke; font-weight: 600; border: rgba(245, 222, 179, 0.349) 1px solid;">Reset Paragraf</button>
-            </div>
-            <div class="hasil">
-                <ul class="output" id="container_output3"></ul>
-            </div>
+    <!-- Tugas ke-2 -->
+    <div class="container">
+        <h1>Tugas To Do List</h1>
+        <input type="text" id="input" placeholder="Masukkan teks...">
+        <div class="buttons">
+            <button class="atas" onclick="tambah()">Tambah Paragraf</button>
+            <button class="atas" onclick="reset()"
+                style="padding: 10px 15px; background-color: #FF0000; color: whitesmoke; font-weight: 600; border: rgba(245, 222, 179, 0.349) 1px solid;">Reset
+                Paragraf</button>
         </div>
-    </section>
+        <div class="hasil">
+            <ul class="output" id="output_container"></ul>
+        </div>
+    </div>
     <script src="code.js"></script>
     <script src="LclStrg.js"></script>
 </body>

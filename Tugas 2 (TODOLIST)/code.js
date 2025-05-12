@@ -1,40 +1,27 @@
 // tugas ke 2
 function tambah() {
-    let teks = document.getElementById("input").value;
-    let inputfield = document.getElementById("input");
+    const teks = document.getElementById("input").value.trim();
+    const inputfield = document.getElementById("input");
 
-    if(!teks.trim()) {
+    if (!teks) {
         alert("Masukkan teks terlebih dahulu!");
         return;
     }
 
-    let oli = document.createElement("li");
-    oli.className = "todo-item";
-
-    let ospan = document.createElement("span");
-    ospan.textContent = teks;
-    oli.appendChild(ospan);
-
-    let hapusButton = document.createElement("button");
-    hapusButton.textContent = "Hapus";
-    hapusButton.className = "hapus-item";
-    hapusButton.onclick = function() {
-        oli.remove();
-    };
-    oli.appendChild(hapusButton);
-
-    document.getElementById("output_container").appendChild(oli);
-    document.getElementById("input").value = "";
-    inputfield.focus()
+    const id = Date.now();
+    render(teks, id);
+    saveToStorage(teks);
+    inputfield.value = "";
+    inputfield.focus();
 }
 
-function reset(){
-    let container = document.getElementById("output_container")
-    if (container.children.length > 0) {
+function reset() {
+    if (document.getElementById("output_container").children.length > 0) {
         if (confirm("Apakah Anda yakin ingin menghapus semua data?")) {
-            container.innerHTML = ""
+            document.getElementById("output_container").innerHTML = "";
+            clearStorage();
         }
     } else {
-        alert("Paragraf tidak ditemukan!")
+        alert("Paragraf tidak ditemukan!");
     }
 }

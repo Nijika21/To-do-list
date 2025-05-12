@@ -1,48 +1,61 @@
 // local storage
-document.addEventListener('DOMContentLoaded', () => {
-    loadFromStorage();
-});
-
 const storageKey = 'todoItems';
 
+document.addEventListener('DOMContentLoaded', () => {
+    const savedItems = JSON.parse(localStorage.getItem(storageKey)) || [];
+    savedItems.forEach(item => {
+        createTodoItem(item.text, item.id);
+    });
+});
+
 function saveToStorage(text) {
-    const items = JSON.parse(localStorage.getItem(storageKey)) || [];
-    items.push({ id: Date.now(), text });
+    const items = getItemsFromStorage();
+    const newItem = { 
+        id: Date.now(), 
+        text: text 
+    };
+    items.push(newItem);
     localStorage.setItem(storageKey, JSON.stringify(items));
+    return newItem.id;
 }
 
-function loadFromStorage() {
-    const items = JSON.parse(localStorage.getItem(storageKey)) || [];
-    items.forEach(item => render(item.text, item.id));
+function getItemsFromStorage() {
+    return JSON.parse(localStorage.getItem(storageKey)) || [];
 }
 
-function removeFromStorage(id) {
-    let items = JSON.parse(localStorage.getItem(storageKey)) || [];
-    items = items.filter(item => item.id !== id);
-    localStorage.setItem(storageKey, JSON.stringify(items));
+function deleteFromStorage(id) {
+    const items = getItemsFromStorage();
+    const updatedItems = items.filter(item => item.id !== id);
+    localStorage.setItem(storageKey, JSON.stringify(updatedItems));
 }
 
 function clearStorage() {
     localStorage.removeItem(storageKey);
 }
 
-function render(text, id) {
-    const oli = document.createElement("li");
-    oli.className = "todo-item";
-    oli.dataset.id = id;
+function createTodoItem(text, id) {
+    const li = document.createElement("li");
+    li.className = "todo-item";
+    li.dataset.id = id;
 
-    const ospan = document.createElement("span");
-    ospan.textContent = text;
-    oli.appendChild(ospan);
+    const span = document.createElement("span");
+    span.textContent = text;
+    li.appendChild(span);
 
-    const hapusButton = document.createElement("button");
-    hapusButton.textContent = "Hapus";
-    hapusButton.className = "hapus-item";
-    hapusButton.onclick = () => {
-        oli.remove();
-        removeFromStorage(id);
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Hapus";
+    deleteBtn.className = "hapus-item";
+    deleteBtn.onclick = () => {
+        li.remove();
+        deleteFromStorage(id);
     };
-    oli.appendChild(hapusButton);
+    li.appendChild(deleteBtn);
 
-    document.getElementById("output_container").appendChild(oli);
+    document.getElementById("output_container").appendChild(li);
 }
+
+window.todoStorage = {
+    saveToStorage,
+    clearStorage,
+    createTodoItem
+};

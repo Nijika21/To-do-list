@@ -29,12 +29,12 @@ button{
 }
 .Tugas-1:hover{
     transform: scale(1.05);
-    background-color: #f6ee69;
+    background-color: #f37ecb;
     transition: all 0.2s;  
 }
 .Tugas-2:hover{
     transform: scale(1.05);
-    background-color: #6d69f6;
+    background-color: #f37ecb;
     transition: all 0.2s;  
 }
 a{

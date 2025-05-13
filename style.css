@@ -40,3 +40,34 @@ button{
 a{
     color: #2c2323;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .button {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+    button {
+        width: 80%;
+        font-size: 18px;
+        padding: 12px 0;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,4 +1,3 @@
-
 // tugas ke 2
 function tambah() {
     const input = document.getElementById("input");
@@ -14,6 +13,11 @@ function tambah() {
     input.value = "";
     input.focus();
 }
+input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        tambah()
+    }
+})
 
 function reset() {
     const container = document.getElementById("output_container");

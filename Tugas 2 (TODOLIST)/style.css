@@ -1,11 +1,11 @@
-
-*{
+* {
     font-family: poppins;
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     background-color: #F5F5F5;
@@ -14,11 +14,13 @@ body{
     justify-content: center;
     align-items: center;
 }
-h1{
+
+h1 {
     margin-bottom: 1.5rem;
     margin-top: 1rem;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,20 +31,23 @@ h1{
     background-color: blue;
     border-radius: 10px;
     position: fixed;
-    overflow: hidden; 
+    overflow: hidden;
 }
-input{
+
+input {
     width: 340px;
     padding: 10px 12px;
     border-radius: 4px;
     border: 2px rgb(68, 68, 68) solid;
 }
-.buttons{
+
+.buttons {
     display: flex;
     margin: 10px 0;
     gap: 22px;
 }
-.atas{
+
+.atas {
     background-color: #FAFAFA;
     border: 2px rgb(68, 68, 68) solid;
     border-radius: 4px;
@@ -50,6 +55,7 @@ input{
     cursor: pointer;
     width: 173px;
 }
+
 .hapus-item {
     overflow-y: auto;
     background-color: #ff4444;
@@ -59,7 +65,8 @@ input{
     border-radius: 4px;
     cursor: pointer;
 }
-.output{
+
+.output {
     height: 300px;
     overflow-y: auto;
     scrollbar-width: none;
@@ -67,6 +74,7 @@ input{
     font-weight: 600;
     width: 367px;
 }
+
 .todo-item {
     display: flex;
     justify-content: space-between;
